@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chessboard {
+    border: 2px solid black;
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.chessboard div {
+    width: calc(100% / 8);
+    height: calc(100% / 8); /* Dynamic height based on width */
+    font-size: 20px; /* Adjusted for mobile screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 1px white;
+}
+
+.w {
+    background-color: white;
+}
+
+.b {
+    background-color: black;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 480px) {
+    .chessboard {
+        width: 80%;
+        height: 80%;
+    }
+
+    .chessboard div {
+        font-size: 13px; 
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+}
